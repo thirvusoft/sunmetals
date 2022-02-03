@@ -80,6 +80,9 @@ app_license = "MIT"
 # DocType Class
 # ---------------
 # Override standard doctype classes
+override_doctype_class = {
+	"lead":"sunmetals.sunmetals.custom.whatsapp.create_address"
+}
 
 # override_doctype_class = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
@@ -88,6 +91,19 @@ app_license = "MIT"
 # Document Events
 # ---------------
 # Hook on document methods and events
+doc_events = {
+    
+    "Lead": {
+        
+		"validate":"sunmetals.sunmetals.custom.validation.phone",
+    },
+	"Address":{
+		"validate":"sunmetals.sunmetals.custom.validation.post",
+	}
+#   "Item": {
+#       "autoname": "tshotel.tshotel.custom.Python.Postcode.set_si_autoname"
+#   }
+}
 
 # doc_events = {
 # 	"*": {
