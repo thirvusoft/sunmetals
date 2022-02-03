@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include sunmetals *.css
+recursive-include sunmetals *.csv
+recursive-include sunmetals *.html
+recursive-include sunmetals *.ico
+recursive-include sunmetals *.js
+recursive-include sunmetals *.json
+recursive-include sunmetals *.md
+recursive-include sunmetals *.png
+recursive-include sunmetals *.py
+recursive-include sunmetals *.svg
+recursive-include sunmetals *.txt
+recursive-exclude sunmetals *.pyc
