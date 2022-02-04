@@ -12,7 +12,9 @@ from frappe.contacts.doctype.address.address import (
     get_address_display,
     get_address_templates,
 )
-class Create(Lead):
+class CustomLead(Lead):
+    # def validate(self):
+    #     self.create_address()
     def create_address(self):
         address_fields = ["address_type", "address_title", "address_line1", "address_line2",
             "city", "county", "state", "country", "pincode", "postal_code"]

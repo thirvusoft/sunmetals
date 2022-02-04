@@ -31,7 +31,8 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+
+doctype_js = {"Customer" : "sunmetals/custom/js/customer.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -81,7 +82,7 @@ app_license = "MIT"
 # ---------------
 # Override standard doctype classes
 override_doctype_class = {
-	"Lead":"sunmetals.sunmetals.custom.app.Create"
+	"Lead":"sunmetals.sunmetals.custom.py.lead.CustomLead"
 }
 
 # override_doctype_class = {
@@ -94,10 +95,10 @@ override_doctype_class = {
 doc_events = {
     
     "Lead": {
-        "validate":"sunmetals.sunmetals.custom.validation.phone",
+        "validate":"sunmetals.sunmetals.custom.py.validation.phone",
     },
 	"Address":{
-		"validate":"sunmetals.sunmetals.custom.validation.post",
+		"validate":"sunmetals.sunmetals.custom.py.validation.post",
 	}
 #   "Item": {
 #       "autoname": "tshotel.tshotel.custom.Python.Postcode.set_si_autoname"
