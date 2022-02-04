@@ -81,7 +81,7 @@ app_license = "MIT"
 # ---------------
 # Override standard doctype classes
 override_doctype_class = {
-	"lead":"sunmetals.sunmetals.custom.whatsapp.create_address"
+	"Lead":"sunmetals.sunmetals.custom.app.Create"
 }
 
 # override_doctype_class = {
@@ -94,8 +94,7 @@ override_doctype_class = {
 doc_events = {
     
     "Lead": {
-        
-		"validate":"sunmetals.sunmetals.custom.validation.phone",
+        "validate":"sunmetals.sunmetals.custom.validation.phone",
     },
 	"Address":{
 		"validate":"sunmetals.sunmetals.custom.validation.post",
