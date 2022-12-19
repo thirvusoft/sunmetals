@@ -32,7 +32,8 @@ app_license = "MIT"
 
 # include js in doctype views
 
-doctype_js = {"Customer" : "sunmetals/custom/js/customer.js"}
+doctype_js = {"Customer" : "sunmetals/custom/js/customer.js",
+			 "Delivery Note": "sunmetals/custom/js/delivery_note.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -99,6 +100,12 @@ doc_events = {
     },
 	"Address":{
 		"validate":"sunmetals.sunmetals.custom.py.validation.post",
+	},
+	"User":{
+		"on_update":"sunmetals.sunmetals.custom.py.user_permission.create_user_permission",
+	},
+	"Branch":{
+		"on_update":"sunmetals.sunmetals.custom.py.warehouse_creation.warehouse_creation_from_branch"
 	}
 #   "Item": {
 #       "autoname": "tshotel.tshotel.custom.Python.Postcode.set_si_autoname"
